@@ -1,8 +1,12 @@
 var locs = [];
 
 function setup() {
-	var canvas = createCanvas(windowWidth, (windowHeight*0.8));
-	canvas.parent('sketch')
+	createCanvas(windowWidth, windowHeight);
+	canvas.parent('sketch');
+
+	var res = 24;
+	var countX = ceil(width/res) + 1;
+	var countY = ceil(height/res) + 1;
 
 	var res = 20;
 	var countX = ceil(width / res) + 1;
@@ -35,24 +39,4 @@ function calcVec(x, y) {
 	return new p5.Vector(y - x, -x - y);
 }
 
-
-
-
-
-// Register an event listener to call the resizeCanvas() function
-// each time the window is resized.
-window.addEventListener('resize', resizeCanvas, false);
-// Draw canvas border for the first time.
-
-
-// Display custom canvas. In this case it's a blue, 5 pixel
-// border that resizes along with the browser window.
-
-// Runs each time the DOM window resize event fires.
-// Resets the canvas dimensions to match window,
-// then draws the new borders accordingly.
-function resizeCanvas() {
-	htmlCanvas.width = window.innerWidth;
-	htmlCanvas.height = window.innerHeight;
-	redraw();
-}
+// [TODO]: resize canvas on window resize
