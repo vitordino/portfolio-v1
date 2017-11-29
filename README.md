@@ -1,6 +1,4 @@
-Matamoros Web
-
-> Site para banda Matamoros
+Vitor Dino Portfolio
 
 ### to run locally
 `npm run dev`
