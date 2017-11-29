@@ -2,7 +2,7 @@ mixin text-card(text)
 
 	if text.visible!==false
 		if text.link
-			a.text-card(href=text.link)&attributes(attributes)
+			a.text-card(href=text.link target='_blank')&attributes(attributes)
 				.info
 					if text.title
 						.card-title
