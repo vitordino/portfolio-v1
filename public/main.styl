@@ -24,7 +24,7 @@ body
 		font-size: 1.125rem
 		line-height: 2rem
 
-a
+a, button
 	text-decoration: none
 	color: currentColor
 	cursor: pointer;
@@ -89,3 +89,19 @@ svg
 
 .-fade
 	color: alpha($color-font, 0.3)
+
+.-ta-right
+	text-align: right;
+
+.ghost-button, button.ghost-button, a.ghost-button
+	appearence none
+	border-radius: 0
+	border 2px solid currentColor
+	background: none
+	color: currentColor
+	font-size: 0.75rem
+	text-transform: uppercase;
+	font-weight: 600
+	letter-spacing: 0.875px
+	padding: 1em 2em
+	cursor: pointer;

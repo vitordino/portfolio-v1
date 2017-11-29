@@ -1,0 +1,16 @@
+mixin contact()
+	.contact
+		form#contact-form
+			.contact-form
+				.contact-input
+					input(id='name' type='text' placeholder=' ' required)
+					label(for='name') Name
+				.contact-input
+					input(id='email' type='email' placeholder=' ' required)
+					label(for='email') Email
+			.contact-form
+				.contact-input
+					textarea(id='message' type='text' placeholder=' ' rows='1' required)
+					label(for='message') Say Hello!
+			.-ta-right
+				input.ghost-button(type='submit' value='Send Message')
