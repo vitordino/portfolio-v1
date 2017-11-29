@@ -1,7 +1,7 @@
 {
-  "name": "matamoros-web",
+  "name": "vitordino",
   "version": "1.0.0",
-  "description": "site para a banda matamoros",
+  "description": "designer + front-end developer",
   "scripts": {
     "start": "harp-scripts start",
     "watch": "harp-scripts watch",
