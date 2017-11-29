@@ -29,7 +29,7 @@
 				width 100%
 				max-width 100%
 				border none
-				border-bottom 2px solid currentColor
+				border-bottom 1px solid currentColor
 				transition 0.3s ease border
 				color white
 				&:focus
@@ -39,7 +39,7 @@
 				&:invalid
 					border-color $color-error
 				&:placeholder-shown
-					border-color rgba(255,255,255,0.6)
+					border-color alpha($color-font, 0.2)
 				& + label
 					left 0
 					display block;
@@ -47,10 +47,12 @@
 					position absolute
 					pointer-events none
 					transition 0.2s ease all
-					color rgba(255,255,255,0.6)
-					top -24px
+					color alpha($color-font, 0.6)
+					top -1.5em
 					font-size 14px
 					font-weight: 400
+					+above(md)
+						top -1.25em
 				&[required] + label:after
 					content '*'
 					position absolute;
@@ -66,7 +68,7 @@
 					top 10px
 					font-size 1rem
 					&:after
-						color rgba(255,255,255,0.6)
+						color alpha($color-font, 0.4)
 		input:-webkit-autofill
 			-webkit-box-shadow: 0 0 0 30px $color-body inset
 			-webkit-box-shadow: 0 0 0 30px $color-body inset

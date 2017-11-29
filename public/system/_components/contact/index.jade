@@ -1,16 +1,17 @@
 mixin contact()
 	.contact
-		form#contact-form
+		form#contact-form(action='https://formspree.io/vitor@kunstdesign.com.br' method='POST')
 			.contact-form
 				.contact-input
 					input(id='name' type='text' placeholder=' ' required)
 					label(for='name') Name
 				.contact-input
-					input(id='email' type='email' placeholder=' ' required)
+					input(id='email' type='email' placeholder=' ' name='_replyto' required)
 					label(for='email') Email
 			.contact-form
 				.contact-input
 					textarea(id='message' type='text' placeholder=' ' rows='1' required)
 					label(for='message') Say Hello!
 			.-ta-right
+				input(type='hidden' name='_next' value='/success')
 				input.ghost-button(type='submit' value='Send Message')
