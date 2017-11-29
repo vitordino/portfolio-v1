@@ -1,0 +1,33 @@
+include /system/_components/index
+include /system/_frontmatter/index
+-const frontmatter = getFrontmatter(current.path, public)
+
+main.container
+	section#experience
+		+heading({title: 'experience'})
+		for experience in frontmatter.public.experience
+			+text-card(experience)
+
+	section#opensource-works
+		+heading({title: 'open-source works'})
+		for work in frontmatter.public.work
+			+text-card(work)
+
+	section#other-works
+		+heading({title: 'other works'})
+		ul.other-works
+			li: a(href='http://kunst.com.br')
+				span kunst landing page
+				i(data-feather='external-link')
+			li: a(href='http://mouselabs.com.br')
+				span mouselabs landing page
+				i(data-feather='external-link')
+			li: a(href='http://outbas.com')
+				span outbas landing page
+				i(data-feather='external-link')
+			li: a(href='http://bluelab-components.netlify.com')
+				span bluelab dashboard
+				i(data-feather='external-link')
+
+	section#contact
+		+heading({title: 'contact'})

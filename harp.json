@@ -1,0 +1,16 @@
+{
+	"globals": {
+		"site": {
+			"title": "Vitor Dino",
+			"description": "Designer & Front-end developer",
+			"email": "vitor@kunstdesign.com.br",
+			"facebook": null,
+			"instagram": null,
+			"twitter": null,
+			"whatsapp": null,
+			"github": "vitordino",
+			"gitlab": null,
+			"codepen": null
+		}
+	}
+}

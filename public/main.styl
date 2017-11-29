@@ -1,0 +1,87 @@
+@import "/system/_mixins"
+@import "/system/_components"
+@import "/system/assets/fonts"
+
+body
+	box-sizing: border-box
+	font-family: $font-sans
+	font-size: $font-size
+	line-height: $line-height
+	font-weight: 300
+	text-rendering: optimizeLegibility
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	font-smooth: antialised
+	font-smoothing: antialised
+	text-rendering: optimizeLegibility
+	color: $color-font
+	background-color: $color-body
+	font-feature-settings: "kern" 1, "liga" 1, "calt" 1, "pnum" 1, "tnum" 1, "onum" 0, "lnum" 1, "dlig" 1, "zero" 1
+	hyphens: auto
+	font-size: 0.875rem
+	line-height: 1.5rem
+	+above(md)
+		font-size: 1.125rem
+		line-height: 2rem
+
+a
+	text-decoration: none
+	color: currentColor
+	cursor: pointer;
+
+p + p
+	margin-top: 1.25rem
+
+main
+	padding-top: 5rem
+	padding-bottom: 4rem
+	+above(md)
+		padding-top: 0
+
+section
+	margin-bottom: 6em
+
+strong
+	font-weight: 500
+
+.fixed
+	position: fixed
+	width: 100%
+	display: block
+
+.container
+	max-width: 56rem
+	width: 90%
+	+above(md)
+		width: 80%
+
+svg
+	height: 1em
+	position: relative
+	top -0.5px
+	stroke-width 1.75px
+	+above(md)
+		top: -0.25px
+		// margin-left: 0.5rem
+		height: 0.875rem
+		stroke-width 2.25px
+	span+&
+		margin-left: 0.25rem
+	&+span
+		margin-right: 0.25rem
+
+
+
+.other-works
+	svg
+		color: alpha($color-font, 0.4)
+		+above(md)
+			color: transparent
+	a
+		display: block;
+	li
+		&+li
+			margin-top: 1.5em
+		:hover
+			svg
+				color: $color-font

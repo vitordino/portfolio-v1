@@ -1,0 +1,24 @@
+include /system/_components/index
+
+doctype
+
+html(lang='pt')
+	head
+		if site.title && site.description
+			title #{site.title} – #{site.description}
+		else
+			title #{site.title}
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(href='/main.css', rel='stylesheet')
+	body
+
+		+title-bar()
+		!= yield
+
+		//- +nav()
+		+footer()
+
+		script(src='https://unpkg.com/feather-icons/dist/feather.min.js')
+		script.
+			feather.replace()

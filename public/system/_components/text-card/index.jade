@@ -1,0 +1,26 @@
+mixin text-card(text)
+
+	if text.visible!==false
+		if text.link
+			a.text-card(href=text.link)&attributes(attributes)
+				.info
+					if text.title
+						.card-title
+							h3= text.title
+							i(data-feather='external-link')
+					if text.date
+						.card-date
+							time= text.date
+				if text.description
+					p.card-description= text.description
+
+		else
+			.text-card&attributes(attributes)
+				.info
+					if text.title
+						h3.card-title= text.title
+					if text.date
+						.card-date
+							time= text.date
+				if text.description
+					.card-description= text.description

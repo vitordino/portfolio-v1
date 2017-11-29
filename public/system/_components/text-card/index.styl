@@ -1,0 +1,39 @@
+
+
+.text-card
+	color $color-font
+	position: relative
+	display: block
+	padding-top: 1em
+	padding-bottom: 1em
+
+	.card-title
+		display: flex
+		align-items: center
+		justify-content: space-between
+		position: relative
+		+above(md)
+			justify-content: flex-start
+		svg
+			color: alpha($color-font, 0.4)
+			+above(md)
+				color: transparent
+
+	.info
+		display: flex
+		justify-content: space-between
+
+	time, .card-description
+		color: alpha($color-font, 0.4)
+		font-size: 0.875em
+		line-height: 1.25rem
+		letter-spacing: 0.5px
+		+above(md)
+			letter-spacing: normal;
+			font-size: 0.875rem
+			line-height: 1.125rem
+
+	:hover, :active, :focus
+		color $color-font
+		svg, time
+			color $color-font

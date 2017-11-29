@@ -1,0 +1,70 @@
+
+.title-bar
+	header
+		display: flex
+		// background-color: #444
+		max-width: 56rem
+		width: 90%
+		margin: 2rem auto
+		display: flex
+		flex-wrap: wrap;
+		justify-content: space-between
+		align-items: center
+		+above(md)
+			width: 80%
+			font-size: 1em
+			letter-spacing: 0.5px
+		.left, .right
+			display: flex
+			margin-bottom: 0.75rem
+			align-items: baseline
+			> *
+				flex-shrink: 0
+		a
+			color: alpha($color-font, 0.8)
+		a.name
+			font-weight: 500
+			letter-spacing: 0.75px
+			color: #fff
+			font-size: 1.125em
+			line-height: 1.5rem
+			.description
+				letter-spacing: 0.25px
+				font-weight: normal
+				color: alpha($color-font, 0.5)
+				font-size: 0.75rem
+				line-height: 1rem
+				+above(md)
+					font-size: 0.75em
+					line-height: 1.25rem
+
+		ul.social
+			display: flex
+			li
+				background: alpha($color-font, 0.05)
+				border-radius: 4px
+				transition: 0.2s all
+				+above(md)
+					background: none
+				:hover, :active, :focus
+					background: $color-font
+				&+li
+					margin-left: 0.75rem
+				a
+					display: flex
+					padding: 12px
+					color: alpha($color-font, 0.75)
+					transition: 0.2s all
+					+above(md)
+						padding: 12px
+						color: alpha($color-font, 0.6)
+					:hover, :active, :focus
+						color: $color-body
+				svg
+					align-self: center
+					height: 1.125rem
+					stroke-width 1.5
+					margin: 0
+					+above(md)
+						height: 1rem
+						stroke-width 1.75

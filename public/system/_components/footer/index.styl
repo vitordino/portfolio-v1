@@ -1,0 +1,32 @@
+footer
+	font-size: 0.875rem
+	line-height: 2rem
+	color: alpha($color-font, 0.5)
+
+	.footer-info
+		padding-top: 1.25rem
+		padding-bottom: 1.25rem
+		border-top: 1px solid alpha($color-font, 0.1)
+		display: flex
+		div
+			flex 1
+		a
+			color: currentColor
+			:hover, :active, :focus
+				color: $color-font
+				svg
+					opacity: 1
+			svg
+				vertical-align: -1px
+				// opacity: 0.25
+				height: 0.75rem
+				stroke-width 1.5px
+				color white
+				opacity: 0.4
+
+	.year
+		font-size: 0.875em
+		font-weight: 500
+		margin-left: 2px
+		color alpha($color-font, 0.25)
+		letter-spacing: 0.75px
