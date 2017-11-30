@@ -35,4 +35,6 @@ function calcVec(x, y) {
 	return new p5.Vector(y - x, -x - y)
 }
 
+
+
 //- [TODO]: resize canvas on resize window
