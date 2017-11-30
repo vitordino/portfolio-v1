@@ -1,17 +1,23 @@
+mixin contact-input({name, label, type = 'text', textarea = false})
+	-const tag = textarea ? 'textarea' : 'input'
+	-const _type = tag === 'input' ? type : null
+	-const rows = tag === 'textarea' ? '1' : null
+	.contact-input
+		#{tag}(id=name name=name rows=rows type=_type placeholder=' ' required)
+		label(for=name)=(label || name)
+
 mixin contact()
 	.contact
-		form#contact-form(action='https://formspree.io/vitor@kunstdesign.com.br' method='POST')
+		form#contact-form(name='contact' action='/success' method='post' data-netlify='true' data-netlify-honeypot='hid')
+			input.-display-none(name='hid')
 			.contact-form
-				.contact-input
-					input(id='name' type='text' placeholder=' ' name='name' required)
-					label(for='name') name
-				.contact-input
-					input(id='email' type='email' placeholder=' ' name='_replyto' required)
-					label(for='email') email
+				+contact-input({name: 'name'})
+				+contact-input({name: 'email', type: 'email'})
 			.contact-form
-				.contact-input
-					textarea(id='message' type='text' placeholder=' ' name='message' rows='1' required)
-					label(for='message') hello! let's work together
+				+contact-input({
+					textarea: true,
+					name: 'message',
+					label: 'hello! lets work together'
+				})
 			.-ta-right
-				input(type='hidden' name='_next' value='/success')
 				input.ghost-button(type='submit' value='Send Message')
