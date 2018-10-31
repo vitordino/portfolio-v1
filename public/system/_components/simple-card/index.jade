@@ -1,0 +1,6 @@
+mixin simple-card(text)
+	.simple-card
+		a(href=text.link target='_blank')&attributes(attributes)
+			span= text.title
+			span.-fade= `  ${text.description}`
+			i(data-feather=`${text.icon ? text.icon : 'external-link'}`)

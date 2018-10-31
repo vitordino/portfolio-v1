@@ -17,14 +17,8 @@ main.container
 	section#other-works
 		+heading({title: 'other works'})
 		ul.other-works
-			li: a(href='http://kunst.com.br' target='_blank')
-				span kunst
-				span.-fade  landing page
-				i(data-feather='external-link')
-			li: a(href='/system/assets/documents/tangente.pdf' target='_blank')
-				span tangente
-				span.-fade  analog photography on x-ray plates
-				i(data-feather='file')
+			for work in frontmatter.public.other
+				+simple-card(work)
 
 	section#contact
 		+heading({title: 'contact'})
