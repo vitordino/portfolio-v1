@@ -3,7 +3,12 @@ mixin footer()
 		.footer-info
 			div
 				span #{site.title}
-				span.year= ' © 2017'
+				span.year
+					span.copywright= ' © '
+					span#year 2018
 			a(href="https://kunstdesign.com.br")
 				i(data-feather='layout')
 				span kunst design
+
+	script.
+		document.getElementById('year').innerHTML = (new Date()).getFullYear()
