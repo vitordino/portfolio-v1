@@ -1,3 +1,5 @@
+> for latest version go to [vitordino/vitordino.com](https://github.com/vitordino/vitordino.com)
+
 Vitor Dino Portfolio
 
 ### to run locally
